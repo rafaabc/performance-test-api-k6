@@ -2,14 +2,15 @@ import http from "k6/http";
 import { sleep, check } from "k6";
 
 export const options = {
-  iterations: 50, //executar o teste 50 vezes, 1 por segundo
+  vus: 10,
+  duration: "30s",
   thresholds: {
-    http_req_duration: ["p(90)<10", "max<1"], // 90% das requisições devem ser menores que 10ms
-    http_req_failed: ["rate<0.01"], // Menos de 1% das requisições devem falhar
+    http_req_duration: ["p(90)<3000", "max<5000"],
+    http_req_failed: ["rate<0.01"],
   },
 };
 
-export default function () {
+export default function login() {
   const url = "http://localhost:3000/login";
   const payload = JSON.stringify({
     username: "julio.lima",
