@@ -47,7 +47,7 @@ performance-test-api-k6/
 
 ### Prerequisite: API up and running
 
-The tests in this repository depend on the [banco-api-performance](https://github.com/juliodelimas/banco-api-performance) API being up and running. Before executing any test, make sure to follow the setup and startup instructions from that project.
+The tests in this repository depend on the [banco-api](https://github.com/juliodelimas/banco-api) API being up and running. Before executing any test, make sure to follow the setup and startup instructions from that project.
 
 ### Installation
 
